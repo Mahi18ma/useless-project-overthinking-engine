@@ -2,8 +2,9 @@
  <img src="https://github.com/user-attachments/assets/60920c37-7789-4700-9e6d-c4e9d6532a7f" alt="Overthinking Engine Banner" width="80%">
 </p>
 
+
 <p align="center">
-  <a href="https://mahi18ma.github.io/useless-project-overthinking-engine/" target="_blank" rel="noopener noreferrer" style="display: inline-block; text-decoration: none; color: black; background-color: #FBBF24; border: 2px solid black; font-family: 'SF Mono', Menlo, Monaco, Consolas, monospace; font-size: 18px; font-weight: 700; padding: 16px 32px; box-shadow: 4px 4px 0px black;">
+  <a href="https://mahi18ma.github.io/useless-project-overthinking-engine/" target="_blank" rel="noopener noreferrer" style="display: inline-block; text-decoration: none; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; color: white; font-size: 18px; font-weight: 600; padding: 16px 32px; border-radius: 12px; background-image: linear-gradient(145deg, #6D28D9, #4F46E5); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
     🚀 Try Overthinking Engine Live
   </a>
 </p>
@@ -54,3 +55,4 @@ A playful web application designed to visualize, analyze, and gamify the process
 
 
     
+
