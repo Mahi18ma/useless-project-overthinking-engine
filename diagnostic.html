@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick API Diagnostic</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; padding: 20px; }
+        .result { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .info { background: #d1ecf1; color: #0c5460; }
+        button { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        pre { background: #f8f9fa; padding: 10px; border-radius: 5px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>🔧 API Diagnostic Tool</h1>
+    <button onclick="runDiagnostic()">Run Quick Diagnostic</button>
+    <div id="results"></div>
+
+    <script>
+        async function runDiagnostic() {
+            const results = document.getElementById('results');
+            results.innerHTML = '<div class="result info">Running diagnostic...</div>';
+              const apiKey = 'AIzaSyBnE2E-0BOQop43TY5Dry4R1buLFGkiSeo';
+            const apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
+            
+            try {
+                // Test 1: Network connectivity
+                results.innerHTML += '<div class="result info">✓ Testing network connectivity...</div>';
+                
+                // Test 2: API endpoint
+                results.innerHTML += '<div class="result info">✓ Testing API endpoint...</div>';
+                  const response = await fetch(`${apiUrl}`, {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'X-goog-api-key': apiKey
+                    },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: "Say hello" }] }]
+                    })
+                });
+                
+                results.innerHTML += `<div class="result ${response.ok ? 'success' : 'error'}">Response Status: ${response.status}</div>`;
+                
+                const data = await response.json();
+                results.innerHTML += `<div class="result info">Raw Response:<pre>${JSON.stringify(data, null, 2)}</pre></div>`;
+                
+                if (response.ok && data.candidates) {
+                    results.innerHTML += '<div class="result success">✅ API is working correctly!</div>';
+                } else {
+                    results.innerHTML += '<div class="result error">❌ API response issues detected</div>';
+                }
+                
+            } catch (error) {
+                results.innerHTML += `<div class="result error">❌ Error: ${error.message}</div>`;
+            }
+        }
+    </script>
+</body>
+</html>

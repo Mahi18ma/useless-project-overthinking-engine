@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Overthinking Engine™ - Making Mountains Out of Molehills Since 2025</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen Extravaganza -->
+    <div id="loading-container" class="loading-screen active">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">
+            <h2>Initializing Overthinking Engine™</h2>
+            <div class="loading-progress">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <p id="loading-message">Calibrating anxiety amplifiers...</p>
+        </div>
+        <div class="loading-stats">
+            <div class="stat">
+                <span class="stat-label">Possibilities Generated:</span>
+                <span class="stat-value" id="possibilities-count">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Worst-Case Scenarios:</span>
+                <span class="stat-value" id="scenarios-count">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Anxiety Level:</span>
+                <span class="stat-value" id="anxiety-level">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="main-app" class="hidden">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    <h1>The Ultimate Overthinking Engine™</h1>
+                    <span class="tagline">Making mountains out of molehills since 2025</span>
+                </div>                <nav class="nav">
+                    <button class="nav-btn active" data-section="analyzer">Hyper-Analyzer</button>
+                    <button class="nav-btn" data-section="scenarios">Impossibility Generator</button>
+                    <button class="nav-btn" data-section="analytics">Useless Analytics</button>
+                </nav>
+                <div class="anxiety-meter">
+                    <label>Current Anxiety:</label>
+                    <div class="meter">
+                        <div class="meter-fill" id="anxiety-meter-fill"></div>
+                    </div>
+                    <span id="anxiety-percentage">0%</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hyper-Scenario Input System -->
+        <section id="analyzer" class="section active">
+            <div class="container">
+                <h2>Hyper-Scenario Input System</h2>
+                <p class="section-subtitle">Describe your scenario down to the molecular level</p>
+                
+                <div class="input-grid">
+                    <div class="input-group">
+                        <label for="decision-input">What trivial decision are you overthinking?</label>
+                        <textarea id="decision-input" placeholder="e.g., Should I have coffee or tea? (Prepare for 47,293 considerations...)" rows="4"></textarea>
+                        <div class="input-stats">
+                            <span>Characters: <span id="char-count">0</span>/∞</span>
+                            <span>Complexity Score: <span id="complexity-score">0</span></span>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Significance Inflation (1-10,000)</label>
+                        <input type="range" id="significance" min="1" max="10000" value="8000">
+                        <div class="range-display">
+                            <span>Barely Noticeable</span>
+                            <span id="significance-value">8000</span>
+                            <span>Universe-Altering</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Emotional Spectrum Mapping</label>
+                        <div class="emotion-grid">
+                            <button class="emotion-btn" data-emotion="existential-dread">Existential Dread</button>
+                            <button class="emotion-btn" data-emotion="mild-panic">Mild Panic</button>
+                            <button class="emotion-btn" data-emotion="decision-paralysis">Decision Paralysis</button>
+                            <button class="emotion-btn" data-emotion="overwhelming-options">Overwhelming Options</button>
+                            <button class="emotion-btn" data-emotion="future-regret">Future Regret</button>
+                            <button class="emotion-btn" data-emotion="choice-anxiety">Choice Anxiety</button>
+                        </div>
+                        <div id="selected-emotions"></div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Context Overflow Tags</label>
+                        <div class="tags-container">
+                            <input type="text" id="tag-input" placeholder="Add infinite context tags...">
+                            <button id="add-tag">Add Tag</button>
+                        </div>
+                        <div id="tags-display"></div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Time Complexity Matrix</label>
+                        <div class="time-factors">
+                            <label><input type="checkbox" id="past-lives"> Consider Past Lives Impact</label>
+                            <label><input type="checkbox" id="future-reincarnations"> Future Reincarnations Analysis</label>
+                            <label><input type="checkbox" id="butterfly-effect"> Butterfly Effect Calculations</label>
+                            <label><input type="checkbox" id="parallel-universes"> Parallel Universe Tracking</label>
+                            <label><input type="checkbox" id="time-travel"> Time Travel Consequences</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="analyze-btn" class="cta-button">
+                    <i class="fas fa-rocket"></i>
+                    Begin Catastrophic Over-Analysis
+                </button>
+            </div>
+        </section>
+
+        <!-- Impossibility Generation Engine -->
+        <section id="scenarios" class="section">
+            <div class="container">
+                <h2>Impossibility Generation Engine</h2>
+                <p class="section-subtitle">Why consider 10 outcomes when you can have 10,000?</p>
+                
+                <div class="scenarios-grid">
+                    <div class="scenario-card">
+                        <h3><i class="fas fa-skull"></i> Worst-Case Apocalypse Scenarios</h3>
+                        <div id="worst-case-list" class="scenario-list"></div>
+                        <button class="generate-btn" data-type="worst-case">Generate More Doom</button>
+                    </div>
+
+                    <div class="scenario-card">
+                        <h3><i class="fas fa-rainbow"></i> Best-Case Utopia Outcomes</h3>
+                        <div id="best-case-list" class="scenario-list"></div>
+                        <button class="generate-btn" data-type="best-case">Generate More Bliss</button>
+                    </div>
+
+                    <div class="scenario-card">
+                        <h3><i class="fas fa-atom"></i> Quantum Possibilities</h3>
+                        <div id="quantum-list" class="scenario-list"></div>
+                        <button class="generate-btn" data-type="quantum">Generate Superposition</button>
+                    </div>
+
+                    <div class="scenario-card">
+                        <h3><i class="fas fa-globe"></i> Multiverse Outcomes</h3>
+                        <div id="multiverse-list" class="scenario-list"></div>
+                        <button class="generate-btn" data-type="multiverse">Explore Dimensions</button>
+                    </div>                </div>
+            </div>
+        </section>
+
+        <!-- Useless Analytics -->
+        <section id="analytics" class="section">
+            <div class="container">
+                <h2>Useless Analytics Dashboard</h2>
+                <p class="section-subtitle">Track your magnificent waste of mental energy</p>                <div class="analytics-grid">
+                    <div class="metric-card">
+                        <h3>Overthinking Intensity Gauge</h3>
+                        <div class="metric-value" id="overthinking-intensity">847.3</div>
+                        <div class="metric-subtitle">Thoughts per minute (TPM)</div>
+                        <div class="intensity-visual">
+                            <div class="intensity-bar">
+                                <div class="intensity-fill" id="intensity-fill"></div>
+                            </div>
+                            <div class="intensity-labels">
+                                <span>Normal</span>
+                                <span>Concerned</span>
+                                <span>Spiraling</span>
+                                <span>MAXIMUM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3>Decision Complexity Matrix</h3>
+                        <div class="complexity-breakdown">
+                            <div class="complexity-item">
+                                <span class="complexity-label">Simple Choice Complications</span>
+                                <span class="complexity-value" id="simple-complications">23,847</span>
+                            </div>
+                            <div class="complexity-item">
+                                <span class="complexity-label">Unnecessary Variables Added</span>
+                                <span class="complexity-value" id="variables-added">1,293</span>
+                            </div>
+                            <div class="complexity-item">
+                                <span class="complexity-label">What-If Scenarios Generated</span>
+                                <span class="complexity-value" id="whatif-scenarios">∞</span>
+                            </div>
+                            <div class="complexity-item">
+                                <span class="complexity-label">Regret Possibilities Calculated</span>
+                                <span class="complexity-value" id="regret-possibilities">47,382</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3>Paralysis Achievement System</h3>
+                        <div class="achievements">
+                            <div class="achievement unlocked" data-achievement="first-hour">
+                                <i class="fas fa-clock"></i>
+                                <span>First Hour of Indecision</span>
+                            </div>
+                            <div class="achievement unlocked" data-achievement="decision-avoider">
+                                <i class="fas fa-ban"></i>
+                                <span>Professional Decision Avoider</span>
+                            </div>
+                            <div class="achievement locked" data-achievement="analysis-paralysis">
+                                <i class="fas fa-infinity"></i>
+                                <span>Analysis Paralysis Master</span>
+                            </div>
+                            <div class="achievement locked" data-achievement="time-waster">
+                                <i class="fas fa-hourglass-empty"></i>
+                                <span>Professional Time Waster</span>
+                            </div>
+                            <div class="achievement locked" data-achievement="spiral-king">
+                                <i class="fas fa-tornado"></i>
+                                <span>Spiral King Supreme</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3>Mental Energy Depletion Tracker</h3>
+                        <div class="energy-display">
+                            <div class="energy-bar-container">
+                                <div class="energy-bar">
+                                    <div class="energy-fill" id="energy-fill" style="width: 23%"></div>
+                                </div>
+                                <div class="energy-percentage">23% Remaining</div>
+                            </div>
+                            <div class="energy-breakdown">
+                                <div class="energy-item">
+                                    <span>🧠 Overthinking</span>
+                                    <span>47%</span>
+                                </div>
+                                <div class="energy-item">
+                                    <span>😰 Anxiety</span>
+                                    <span>23%</span>
+                                </div>
+                                <div class="energy-item">
+                                    <span>🤔 Analysis</span>
+                                    <span>7%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3>Real-Time Thought Spiral Detector</h3>
+                        <div class="spiral-status">
+                            <div class="spiral-indicator active" id="spiral-indicator">
+                                <i class="fas fa-tornado"></i>
+                                <span>SPIRAL DETECTED</span>
+                            </div>
+                            <div class="spiral-details">
+                                <div class="spiral-metric">
+                                    <span class="spiral-label">Current Depth:</span>
+                                    <span class="spiral-value" id="spiral-depth">Level 7</span>
+                                </div>
+                                <div class="spiral-metric">
+                                    <span class="spiral-label">Time in Spiral:</span>
+                                    <span class="spiral-value" id="spiral-time">23m 47s</span>
+                                </div>
+                                <div class="spiral-metric">
+                                    <span class="spiral-label">Escape Probability:</span>
+                                    <span class="spiral-value" id="escape-probability">12.3%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3>Decision Avoidance Calendar</h3>
+                        <div class="metric-value" id="avoidance-streak">47 days</div>
+                        <div class="metric-subtitle">Without making any meaningful choices</div>
+                        <div class="streak-calendar" id="streak-calendar"></div>
+                        <div class="avoidance-stats">
+                            <div class="avoidance-stat">
+                                <span>Decisions Postponed:</span>
+                                <span id="decisions-postponed">2,847</span>
+                            </div>
+                            <div class="avoidance-stat">
+                                <span>Excuses Generated:</span>
+                                <span id="excuses-generated">15,293</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>        </section>        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>The Ultimate Overthinking Engine™</h4>
+                        <p>"Why think once when you can think 47,293 times?"</p>
+                        <p class="disclaimer">Warning: May cause severe decision paralysis, existential dread, and the uncontrollable urge to analyze your analysis of your analysis.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Quick Stats</h4>
+                        <ul>
+                            <li>Decisions Complicated: <span id="decisions-complicated">1,247,392</span></li>
+                            <li>Hours Wasted: <span id="hours-wasted">47,293,847</span></li>
+                            <li>Anxiety Levels Raised: <span id="anxiety-raised">∞</span></li>
+                            <li>Simple Things Made Complex: <span id="things-complicated">All of them</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 The Ultimate Overthinking Engine™. All rights reserved. No decisions were made in the creation of this website.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
