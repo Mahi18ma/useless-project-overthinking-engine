@@ -1,7 +1,6 @@
-<!-- Banner -->
-\<p align="center"\>
-\<img src="[https://github.com/user-attachments/assets/60920c37-7789-4700-9e6d-c4e9d6532a7f](https://github.com/user-attachments/assets/60920c37-7789-4700-9e6d-c4e9d6532a7f)" alt="Overthinking Engine Banner" width="80%"\>
-\</p\>
+<<p align="center">
+ <img src="https://github.com/user-attachments/assets/60920c37-7789-4700-9e6d-c4e9d6532a7f" alt="Overthinking Engine Banner" width="80%">
+</p>
 
 <!-- CTA Button -->
 <p align="center">
@@ -48,6 +47,7 @@ A playful web application designed to visualize, analyze, and gamify the process
 1. Open `index.html` in your browser.
 2. Ensure all files are in the same directory.
 3. Enjoy the chaos!
+
 
 
 
