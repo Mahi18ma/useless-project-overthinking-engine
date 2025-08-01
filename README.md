@@ -1,6 +1,7 @@
 <!-- Banner -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/yourusername/Overthinking-Engine/main/banner.png" alt="Overthinking Engine Banner" width="80%">
+  <img src="<img width="1024" height="639" alt="Gemini_Generated_Image_ke3wclke3wclke3w" src="https://github.com/user-attachments/assets/60920c37-7789-4700-9e6d-c4e9d6532a7f" />
+" alt="Overthinking Engine Banner" width="80%">
 </p>
 
 <!-- CTA Button -->
@@ -48,5 +49,6 @@ A playful web application designed to visualize, analyze, and gamify the process
 1. Open `index.html` in your browser.
 2. Ensure all files are in the same directory.
 3. Enjoy the chaos!
+
 
 
