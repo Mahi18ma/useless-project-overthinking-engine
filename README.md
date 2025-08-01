@@ -1,10 +1,11 @@
-<<p align="center">
+<p align="center">
  <img src="https://github.com/user-attachments/assets/60920c37-7789-4700-9e6d-c4e9d6532a7f" alt="Overthinking Engine Banner" width="80%">
 </p>
 
-<!-- CTA Button -->
 <p align="center">
-  <a href="https://mahi18ma.github.io/useless-project-overthinking-engine/" target="_blank" style="display:inline-block; background:linear-gradient(135deg,#ff6b6b,#ff8c42); color:white; padding:16px 48px; border-radius:50px; font-size:1.2rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; text-decoration:none; box-shadow:0 8px 16px rgba(0,0,0,0.2); margin-bottom:24px;">🚀 Try Overthinking Engine Live</a>
+  <a href="https://mahi18ma.github.io/useless-project-overthinking-engine/" target="_blank" rel="noopener noreferrer" style="display: inline-block; text-decoration: none; color: black; background-color: #FBBF24; border: 2px solid black; font-family: 'SF Mono', Menlo, Monaco, Consolas, monospace; font-size: 18px; font-weight: 700; padding: 16px 32px; box-shadow: 4px 4px 0px black;">
+    🚀 Try Overthinking Engine Live
+  </a>
 </p>
 
 # Overthinking Engine™
@@ -51,3 +52,5 @@ A playful web application designed to visualize, analyze, and gamify the process
 
 
 
+
+    
