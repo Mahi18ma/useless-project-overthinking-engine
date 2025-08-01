@@ -3,11 +3,30 @@
 </p>
 
 
-<p align="center">
-  <a href="https://mahi18ma.github.io/useless-project-overthinking-engine/" target="_blank" rel="noopener noreferrer" style="display: inline-block; text-decoration: none; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; color: white; font-size: 18px; font-weight: 600; padding: 16px 32px; border-radius: 12px; background-image: linear-gradient(145deg, #6D28D9, #4F46E5); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
-    🚀 Try Overthinking Engine Live
+<div align="center">
+  <a href="https://mahi18ma.github.io/useless-project-overthinking-engine/" target="_blank" style="text-decoration: none;">
+    <div style="
+      display: inline-block;
+      padding: 16px 48px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #ff6b6b 100%);
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-radius: 50px;
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4), 0 6px 20px rgba(0,0,0,0.15);
+      border: 2px solid rgba(255,255,255,0.2);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    " onmouseover="this.style.transform='translateY(-4px) scale(1.05)'; this.style.boxShadow='0 20px 40px rgba(102, 126, 234, 0.5), 0 10px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px rgba(102, 126, 234, 0.4), 0 6px 20px rgba(0,0,0,0.15)'">
+      🚀 Try Overthinking Engine Live
+    </div>
   </a>
-</p>
+</div>
 
 # Overthinking Engine™
 
@@ -55,4 +74,5 @@ A playful web application designed to visualize, analyze, and gamify the process
 
 
     
+
 
